@@ -1,5 +1,4 @@
 function solution(sizes) {
-    var answer = 0;
     
     let maxW = 0; // 가로 최대값
     let maxH = 0; // 세로 최대값
