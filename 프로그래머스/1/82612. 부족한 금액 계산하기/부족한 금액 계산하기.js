@@ -1,5 +1,5 @@
 function solution(price, money, count) {
-    var answer = -1;
+    var answer = 0;
 
     let countPrice = 0;
     for(let i=1; i<=count; i++){
