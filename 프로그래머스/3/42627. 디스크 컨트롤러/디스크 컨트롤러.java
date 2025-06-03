@@ -36,21 +36,11 @@ class Solution {
             
         }
         
-        answer = returnTime / jobs.length;
-        
-        
-    
+        answer = returnTime / jobs.length;   
         
         return answer;
     }
 }
 
-//소요시간 짧은 순 -> 요청 시각 빠른 순 -> 작업 번호 작은 순
-//한번에 한 작업만
-//반환시간 = 작업종료시간 - 요청시각
-// 반환시간의 평균의 정수 부분 return 
 
-//대기 큐.. 우선순위 큐... 
-
-// time이 되면 대기 큐에 넣고 그 대기큐를 우선순위큐로 정렬
 
