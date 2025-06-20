@@ -3,19 +3,17 @@ import java.util.*;
 class Solution {
     public int solution(int[] nums) {
  
-        int max = nums.length/2;
         
-        HashSet<Integer> numsSet = new HashSet<>();
+        Map<Integer, Integer> numMap = new HashMap<>();
         
-        for(int num : nums){
-            numsSet.add(num);
+        for(int num: nums){
+            numMap.put(num, numMap.getOrDefault(num, 0)+1);
         }
         
-        if(numsSet.size() > max){
-            return max;
-        } else{
-            return numsSet.size();
-        }
-    
+        int N = nums.length;
+        
+        if(N/2<=numMap.size()) return N/2;
+        else return numMap.size();
+
     }
 }
