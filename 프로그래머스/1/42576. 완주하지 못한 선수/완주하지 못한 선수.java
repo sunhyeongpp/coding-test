@@ -2,26 +2,24 @@ import java.util.*;
 
 class Solution {
     public String solution(String[] participant, String[] completion) {
+        String answer = "";
         
-       String answer = "";
-        HashMap<String, Integer>map = new HashMap<>();
+       Map<String, Integer> compleMap = new HashMap<>();
         
-        for(String player: participant){
-            map.put(player, map.getOrDefault(player,0)+1);
-        }
-        for(String player : completion){
-            map.put(player, map.get(player)-1);
+        for(String name: participant){
+            compleMap.put(name, compleMap.getOrDefault(name,0)+1);
         }
         
-        Iterator<Map.Entry<String, Integer>>iter = map.entrySet().iterator();
-        
-        while(iter.hasNext()){
-            Map.Entry<String, Integer> entry = iter.next();
-            if(entry.getValue()!=0){
-                answer = entry.getKey();
-                break;
-            }
+        for(String compleName: completion){
+            compleMap.put(compleName, compleMap.getOrDefault(compleName,0)-1);
         }
-    return answer;
+        
+        for(String key: compleMap.keySet()){
+            if(compleMap.get(key)==1) return key;
+        }
+        
+        
+        
+        return "";
     }
 }
