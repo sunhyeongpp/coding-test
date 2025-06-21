@@ -11,9 +11,8 @@ public class Solution {
                arrList.add(arr[i]);
             }
         }
-        
-        
 
+        //이 부분 체크
         return arrList.stream().mapToInt(i->i).toArray();
     }
 }
