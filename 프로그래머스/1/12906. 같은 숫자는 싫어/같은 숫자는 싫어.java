@@ -2,15 +2,18 @@ import java.util.*;
 
 public class Solution {
     public int[] solution(int []arr) {
+        int[] answer = {};
         
-        List<Integer> temp = new ArrayList<>();
+        List <Integer> arrList = new ArrayList<>();
+        arrList.add(arr[0]);
+        for(int i=1; i<arr.length; i++){
+            if(arr[i]!=arr[i-1]){
+               arrList.add(arr[i]);
+            }
+        }
         
-       for(int a: arr){
-           if(!temp.isEmpty()&& a==temp.get(temp.size()-1)) continue;
-           temp.add(a);
-       }
-        int[] answer = temp.stream().mapToInt(i->i).toArray();
+        
 
-        return answer;
+        return arrList.stream().mapToInt(i->i).toArray();
     }
 }
