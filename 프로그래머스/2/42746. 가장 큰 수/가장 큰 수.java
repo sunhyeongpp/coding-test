@@ -15,8 +15,7 @@ class Solution {
             return "0";
         }
         
-        Arrays.stream(stringNums)
-            .forEach(sb::append);
+        Arrays.stream(stringNums).forEach(s -> sb.append(s));
         
         return sb.toString();
         
